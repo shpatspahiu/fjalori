@@ -1,7 +1,42 @@
 .wordcard {
-  height: 40px;
   background-color: var(--base-dark);
   padding: 20px;
+  margin: 20px 0;
+  border-radius: 6px;
+  color: white;
+  font-size: 1.15rem;
 
+  display: flex;
+  flex-direction: column;
 
+  .title {
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--emph-blue);
+  }
+
+  .explanation {
+    margin-bottom: 1.5rem;
+  }
+
+  .example-container {
+    display: flex;
+    line-height: 1.35;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  .contribution {
+    margin: 40px 0;
+    margin-bottom: 20px;
+    font-weight: 500;
+
+    span {
+      color: var(--emph-blue);
+      cursor: pointer;
+    }
+  }
 }
