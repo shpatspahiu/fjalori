@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Navmenu.scss'
+import { Link } from 'react-router-dom'
 
 const Navmenu = () => {
   const [showMenu, setShowMenu] = useState(false)
@@ -30,9 +31,15 @@ const Navmenu = () => {
 
       {showMenu && (
         <div className='option-container'>
-          <div className='option'>Home</div>
-          <div className='option'>About</div>
-          <div className='option'>Socials</div>
+          <Link to='/'>
+            <div className='option'>Te shpija!</div>
+          </Link>
+          <Link to='/about'>
+            <div className='option'>Cka o ky sen?</div>
+          </Link>
+          <Link to='/new-word'>
+            <div className='option'>Shto definicion...</div>
+          </Link>
         </div>
       )}
     </div>

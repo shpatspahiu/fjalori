@@ -7,7 +7,9 @@ const LayoutClient = () => {
   return (
     <div className='layoutClient'>
       <Navbar />
-      <Outlet />
+      <div className='outlet'>
+        <Outlet />
+      </div>
     </div>
   )
 }
