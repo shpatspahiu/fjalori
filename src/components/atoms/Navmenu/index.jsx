@@ -33,7 +33,6 @@ const Navmenu = () => {
           <div className='option'>Home</div>
           <div className='option'>About</div>
           <div className='option'>Socials</div>
-
         </div>
       )}
     </div>
