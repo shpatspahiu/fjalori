@@ -25,14 +25,24 @@
     box-shadow: 1px 19px 19px 5px rgba(0, 0, 0, 0.45);
 
     .option {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
       margin: 12px;
-      width: min-content;
+      width: 90;
       text-wrap: nowrap;
       padding: 6px 8px;
+      padding-left: 10px;
       border-radius: 8px;
       font-size: 1.2rem;
       font-weight: 500;
       color: var(--base-dark);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        color: black;
+        background-color: rgba(128, 128, 128, 0.262);
+      }
 
       &:active {
         color: black;
