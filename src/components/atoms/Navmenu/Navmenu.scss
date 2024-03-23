@@ -1,0 +1,15 @@
+.navmenu {
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border-radius: 100%;
+    color: var(--theme-yellow);
+    transition: background-color 0.2s ease;
+
+    &:active {
+      background-color: #0653645c;
+    }
+  }
+}
