@@ -1,0 +1,18 @@
+.navbar {
+  background-color: #1b2936;
+  padding: 12px 6px;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: blue;
+    width:  40px;
+    height: 40px;
+
+    color: white;
+    font-weight: bold;
+  }
+
+}

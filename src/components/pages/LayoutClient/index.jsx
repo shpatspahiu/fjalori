@@ -1,8 +1,13 @@
 import React from 'react'
+import Home from '../../organisms/Home'
+import Navbar from '../../molecules/Navbar'
 
 const LayoutClient = () => {
   return (
-    <div>LayoutClient</div>
+    <div>
+      <Navbar />
+      <Home />
+    </div>
   )
 }
 
