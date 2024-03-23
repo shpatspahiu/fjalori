@@ -1,6 +1,7 @@
 .navbar {
   background-color: #1b2936;
   padding: 12px 6px;
+  margin-bottom: 20px;
 
   .logo {
     display: flex;
@@ -8,11 +9,10 @@
     justify-content: center;
     border-radius: 100%;
     background-color: blue;
-    width:  40px;
+    width: 40px;
     height: 40px;
 
     color: white;
     font-weight: bold;
   }
-
 }
