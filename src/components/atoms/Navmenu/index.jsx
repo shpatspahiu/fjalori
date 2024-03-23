@@ -1,17 +1,45 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './Navmenu.scss'
 import { Link } from 'react-router-dom'
 
 const Navmenu = () => {
   const [showMenu, setShowMenu] = useState(false)
+  const dropdownRef = useRef(null)
 
-  const handleMenuClick = () => {
+  useEffect(() => {
+    const handleClickOutside = event => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setShowMenu(false)
+      }
+    }
+
+    // eslint-disable-next-line
+    const handleTouchOutside = event => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setShowMenu(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+
+    // TODO: Test on mobile, if needed, uncomment
+    // document.addEventListener('touchstart', handleTouchOutside)
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+
+      // TODO: Test on mobile, if needed, uncomment
+      // document.removeEventListener('touchstart', handleTouchOutside)
+    }
+  }, [])
+
+  const toggleMenu = () => {
     setShowMenu(!showMenu)
   }
 
   return (
-    <div className='navmenu'>
-      <div onClick={handleMenuClick} className='menu'>
+    <div ref={dropdownRef} className='navmenu'>
+      <div onClick={toggleMenu} className='menu'>
         <svg
           width='32'
           height='32'
@@ -31,7 +59,7 @@ const Navmenu = () => {
 
       {showMenu && (
         <div className='option-container'>
-          <Link to='/'>
+          <Link to='/' onClick={toggleMenu}>
             <div className='option'>
               <svg
                 width='24'
@@ -51,7 +79,7 @@ const Navmenu = () => {
               Te shpija!
             </div>
           </Link>
-          <Link to='/about'>
+          <Link to='/about' onClick={toggleMenu}>
             <div className='option'>
               <svg
                 width='24'
@@ -75,7 +103,7 @@ const Navmenu = () => {
               Cka o ky sen?
             </div>
           </Link>
-          <Link to='/new-word'>
+          <Link to='/new-word' onClick={toggleMenu}>
             <div className='option'>
               <svg
                 width='24'
