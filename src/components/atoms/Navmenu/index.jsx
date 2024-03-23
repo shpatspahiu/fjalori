@@ -31,6 +31,9 @@ const Navmenu = () => {
       {showMenu && (
         <div className='option-container'>
           <div className='option'>Home</div>
+          <div className='option'>About</div>
+          <div className='option'>Socials</div>
+
         </div>
       )}
     </div>

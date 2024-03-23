@@ -25,9 +25,19 @@
 
     .option {
       margin: 12px;
+      width: min-content;
+      padding: 6px 8px;
+      border-radius: 8px;
       font-size: 1.2rem;
       font-weight: 500;
       color: var(--base-dark);
+
+      &:active {
+        color: black;
+        background-color: var(--base-dark);
+        color: white;
+        cursor: pointer;
+      }
     }
   }
 }
