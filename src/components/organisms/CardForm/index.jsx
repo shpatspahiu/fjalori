@@ -2,6 +2,7 @@ import './CardForm.scss'
 
 import React from 'react'
 
+// eslint-disable-next-line
 const result = {
   title: 'More pshtjellan',
   explanation:
@@ -11,7 +12,7 @@ const result = {
     'Uuu pshtjellani nihere, aj e ka kallxu veq ni pjese trealitetit!',
     ''
   ],
-  contribution: "Object id from mongodb of the user doing the post"
+  contribution: 'Object id from mongodb of the user doing the post'
 }
 
 const CardForm = () => {
