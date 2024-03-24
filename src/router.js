@@ -3,7 +3,7 @@ import ClientLayout from "./components/pages/LayoutClient";
 import AdminLayout from "./components/pages/LayoutAdmin";
 import Home from "./components/organisms/Home";
 import About from "./components/organisms/About";
-import NewDefinitionFrom from "./components/organisms/NewDefinitonForm";
+import CardForm from "./components/organisms/CardForm";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/new-word",
-        element: <NewDefinitionFrom />
+        element: <CardForm />
       }
     ]
   },
