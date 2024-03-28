@@ -36,7 +36,7 @@ const Login = ({ setUserState }) => {
   const loginHandler = e => {
     e.preventDefault()
     setFormErrors(validateForm(userCredentials))
-    
+
     setIsSubmit(true)
     // if (!formErrors) {
 
@@ -72,7 +72,7 @@ const Login = ({ setUserState }) => {
       <div className='goRegister'>
         Që s'je i regjistrum, &nbsp;
         <Link to='/register'>
-          <span>regjistrohu qëtu</span>
+          <span>regjistrohu qëtu.</span>
         </Link>
       </div>
     </div>
