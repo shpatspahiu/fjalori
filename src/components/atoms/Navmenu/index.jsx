@@ -123,6 +123,9 @@ const Navmenu = () => {
               Shto definicion...
             </div>
           </Link>
+          <Link to='login'>
+            <div className='option'>Login</div>
+          </Link>
         </div>
       )}
     </div>
