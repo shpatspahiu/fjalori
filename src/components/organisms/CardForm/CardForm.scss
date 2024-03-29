@@ -1,3 +1,39 @@
 .cardForm {
   color: white;
+
+  .form {
+    background-color: var(--base-dark);
+    border-radius: 8px;
+    padding: 3rem 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    input {
+      border-radius: 18px;
+    }
+
+    textarea {
+      border-radius: 18px;
+      font-size: 1.3rem;
+      padding: 12px;
+    }
+
+    #title {
+      font-size: 2rem;
+      padding: 12px;
+    }
+
+    .submitBtn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background-color: var(--emph-blue);
+      padding: 12px;
+      max-width: fit-content;
+      border-radius: 12px;
+      font-size: large;
+    }
+  }
 }
