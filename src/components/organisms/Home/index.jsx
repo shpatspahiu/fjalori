@@ -7,11 +7,8 @@ const Home = () => {
     {
       title: 'Kaka',
       explanation: 'When you take a good shit',
-      examples: [
-        'explenation1 is going to be a bit longer in order to see how it behaves with card!',
-        'example 2 is ex 2 ',
-        "example 3 we'll see, need to use the ... operator"
-      ],
+      examples:
+        "explenation1 is going to be a bit longer in order to see how it behaves with card!\nexample 2 is ex 2\nexample 3 we'll see, need to use the ... operator",
       contribution: {
         name: 'Shpati',
         username: 'spahiush',
@@ -22,11 +19,14 @@ const Home = () => {
       title: 'More pshtjellan',
       explanation:
         'Njeri qe genjen, tu perzi muhabete tulifare, pshtjelle pshtjelle, ta hup realitetin e gjanave si profi!',
-      examples: [
-        'Nejta ni dit me to, ama shum pshtjellan ke, krejt tjeter i kallxojke gjanat',
-        'Uuu pshtjellani nihere, aj e ka kallxu veq ni pjese trealitetit!',
-        ''
-      ],
+      examples:
+        'Nejta ni dit me to, ama shum pshtjellan ke, krejt tjeter i kallxojke gjanat\nUuu pshtjellani nihere, aj e ka kallxu veq ni pjese trealitetit!',
+      contribution: 'Object id from mongodb of the user doing the post'
+    },
+    {
+      title: 'test',
+      explanation: 'test',
+      examples: 'daeadeedaedasdassda\nedaedaedaedeaaed\ndaedeadaeda',
       contribution: 'Object id from mongodb of the user doing the post'
     }
   ]
@@ -38,7 +38,7 @@ const Home = () => {
           <WordCard
             key={i}
             title={card?.title}
-            examples={card?.examples}
+            examples={card?.examples?.split('\n')}
             explanation={card?.explanation}
             contribution={card?.contribution}
           />
