@@ -23,12 +23,12 @@ const Login = ({ setUserState }) => {
     const error = {}
     const regex = /^[^\s+@]+@[^\s@]+\.[^\s@]{2,}$/i
     if (!values.email) {
-      error.email = 'Email is required'
+      error.email = 'Na duhët email-i'
     } else if (!regex.test(values.email)) {
-      error.email = 'Please enter a valid email address'
+      error.email = 'Lutemi, vetëm email-a valid'
     }
     if (!values.password) {
-      error.password = 'Password is required'
+      error.password = 'Na duhët password-i'
     }
     return error
   }

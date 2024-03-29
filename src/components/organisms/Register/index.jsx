@@ -26,27 +26,27 @@ const Register = () => {
     const error = {}
     const regex = /^[^\s+@]+@[^\s@]+\.[^\s@]{2,}$/i
     if (!values.fname) {
-      error.fname = 'First Name is required'
+      error.fname = 'Emri na duhët'
     }
     if (!values.lname) {
-      error.lname = 'Last Name is required'
+      error.lname = 'Mbiemri na duhët'
     }
     if (!values.email) {
-      error.email = 'Email is required'
+      error.email = 'Na duhët email-i'
     } else if (!regex.test(values.email)) {
-      error.email = 'This is not a valid email format!'
+      error.email = 'Ky email nuk është i formatit valid'
     }
     if (!values.password) {
-      error.password = 'Password is required'
-    } else if (values.password.length < 4) {
-      error.password = 'Password must be more than 4 characters'
-    } else if (values.password.length > 10) {
-      error.password = 'Password cannot exceed more than 10 characters'
+      error.password = 'Password-i na duhët'
+    } else if (values.password.length < 8) {
+      error.password = "Password-i duhet t'jetë ma i gjatë se 7 karaktere"
+    } else if (values.password.length > 16) {
+      error.password = "Password-i mos t'jetë ma i gjatë se 16 karaktere"
     }
     if (!values.cpassword) {
-      error.cpassword = 'Confirm Password is required'
+      error.cpassword = 'Konfirmoje password-in'
     } else if (values.cpassword !== values.password) {
-      error.cpassword = 'Confirm password and password should be same'
+      error.cpassword = 'Password-et po dallojnë prej njona-tjetrës! '
     }
     return error
   }
