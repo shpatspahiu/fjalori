@@ -37,6 +37,8 @@ const Login = ({ setUserState }) => {
     e.preventDefault()
     setFormErrors(validateForm(userCredentials))
 
+    console.log(userCredentials)
+
     setIsSubmit(true)
     // if (!formErrors) {
 

@@ -3,7 +3,10 @@
 .navbar {
   background-color: var(--base-dark);
   position: fixed;
-  width: 94%;
+  left: 0;
+  right: 0;
+  width: 100%;
+
   padding: 12px;
 
   display: flex;
@@ -13,6 +16,7 @@
 
   .app-title {
     padding: 12px;
+    margin-right: 28px;
     padding-bottom: 6px;
     color: var(--theme-yellow);
     font-family: 'Calligraffitti', cursive;

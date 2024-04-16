@@ -6,7 +6,7 @@ const Register = () => {
   const [formErrors, setFormErrors] = useState({})
   // eslint-disable-next-line
   const [isSubmit, setIsSubmit] = useState(false)
-  const [user, setUserDetails] = useState({
+  const [userDetails, setUserDetails] = useState({
     fname: '',
     lname: '',
     email: '',
@@ -17,7 +17,7 @@ const Register = () => {
   const changeHandler = e => {
     const { name, value } = e.target
     setUserDetails({
-      ...user,
+      ...userDetails,
       [name]: value
     })
   }
@@ -50,10 +50,12 @@ const Register = () => {
     }
     return error
   }
+
   const signupHandler = e => {
     e.preventDefault()
-    setFormErrors(validateForm(user))
+    setFormErrors(validateForm(userDetails))
     setIsSubmit(true)
+    console.log(userDetails)
     // if (!formErrors) {
     //   setIsSubmit(true);
     // }
@@ -70,7 +72,7 @@ const Register = () => {
             id='fname'
             placeholder='Emri'
             onChange={changeHandler}
-            value={user.fname}
+            value={userDetails.fname}
           />
           <p className='error'>{formErrors.fname}</p>
           <input
@@ -79,7 +81,7 @@ const Register = () => {
             id='lname'
             placeholder='Mbiemri'
             onChange={changeHandler}
-            value={user.lname}
+            value={userDetails.lname}
           />
           <p className='error'>{formErrors.lname}</p>
           <input
@@ -88,7 +90,7 @@ const Register = () => {
             id='email'
             placeholder='Email'
             onChange={changeHandler}
-            value={user.email}
+            value={userDetails.email}
           />
           <p className='error'>{formErrors.email}</p>
           <input
@@ -97,7 +99,7 @@ const Register = () => {
             id='password'
             placeholder='Password'
             onChange={changeHandler}
-            value={user.password}
+            value={userDetails.password}
           />
           <p className='error'>{formErrors.password}</p>
           <input
@@ -106,7 +108,7 @@ const Register = () => {
             id='cpassword'
             placeholder='Apet Password-i'
             onChange={changeHandler}
-            value={user.cpassword}
+            value={userDetails.cpassword}
           />
           <p className='error'>{formErrors.cpassword}</p>
           <button className='button_common' onClick={signupHandler}>
